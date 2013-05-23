@@ -1,2 +1,2 @@
-djutils
-=======
+django-bits
+===========
