@@ -8,9 +8,11 @@ setup(
     version=VERSION,
     author='Siddharth Doshi',
     author_email='scdoshi@gmail.com',
-    description=("Basic Utilities for Django Projects"),
+    description=("Basic utilities and helpers for django projects"),
+    long_description=open('README.md').read(),
     packages=find_packages(),
     url="http://github.com/scdoshi/django-bits/",
+    license='Simplified BSD',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',

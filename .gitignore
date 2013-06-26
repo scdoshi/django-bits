@@ -1,7 +1,15 @@
+# Python
 *.pyc
 *.py~
+*.egg-info
+dist/
+
+# Sphinx
+docs/_*
+
+# General
 *.*~
 sftp-config*.json
-*.sass-cache
 
-docs/_*
+# Sass
+*.sass-cache

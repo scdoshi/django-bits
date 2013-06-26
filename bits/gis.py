@@ -1,5 +1,5 @@
 """
-GIS: GIS related utilities.
+GIS related utilities.
 
 """
 
@@ -12,11 +12,8 @@ import math
 ###############################################################################
 ## GIS Format Conversions
 ###############################################################################
-def GPRMC2DegDec(lat, latDirn, lng, lngDirn):
-    """Converts GPRMC formats (Decimal Minutes) to Degrees Decimal
-
-    Eg.
-    """
+def gprmc_to_degdec(lat, latDirn, lng, lngDirn):
+    """Converts GPRMC formats (Decimal Minutes) to Degrees Decimal."""
     x = float(lat[0:2]) + float(lat[2:]) / 60
     y = float(lng[0:3]) + float(lng[3:]) / 60
 
@@ -28,11 +25,8 @@ def GPRMC2DegDec(lat, latDirn, lng, lngDirn):
     return x, y
 
 
-def TinyGPS2DegDec(lat, lng):
-    """Converts TinyGPS formats (Decimal Degrees to e-5) to Degrees Decimal
-
-    Eg.
-    """
+def tinygps_to_degdec(lat, lng):
+    """Converts TinyGPS formats (Decimal Degrees to e-5) to Degrees Decimal."""
     x = float(lat[:-5] + '.' + lat[-5:])
     y = float(lng[:-5] + '.' + lng[-5:])
 
@@ -52,13 +46,13 @@ degrees_to_radians = math.pi / 180.0
 radians_to_degrees = 180.0 / math.pi
 
 
-def ChangeInLatitude(miles):
+def change_in_latitude(miles):
     """Given a distance north, return the change in latitude."""
 
     return (miles / earth_radius) * radians_to_degrees
 
 
-def ChangeInLongitude(lat, miles):
+def change_in_longitude(lat, miles):
     """Given a latitude and a distance west, return the change in longitude."""
 
     # Find the radius of a circle around the earth at given latitude.
@@ -66,17 +60,17 @@ def ChangeInLongitude(lat, miles):
     return (miles / r) * radians_to_degrees
 
 
-def CalculateBoundingBox(lng, lat, miles):
+def calculate_boundingbox(lng, lat, miles):
     """
     Given a latitude, longitude and a distance in miles, calculate
     the co-ordinates of the bounding box 2*miles on long each side with the
     given co-ordinates at the center.
     """
 
-    latChange = ChangeInLatitude(miles)
+    latChange = change_in_latitude(miles)
     latSouth = lat - latChange
     latNorth = lat + latChange
-    lngChange = ChangeInLongitude(lat, miles)
+    lngChange = change_in_longitude(lat, miles)
     lngWest = lng + lngChange
     lngEast = lng - lngChange
     return (lngWest, latSouth, lngEast, latNorth)

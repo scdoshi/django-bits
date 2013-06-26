@@ -9,25 +9,16 @@ django-bits
 Contents:
 ---------
 
-By Function:
-
 .. toctree::
-   :maxdepth: 4
+    :maxdepth: 2
 
-   cache
-   currency
-   general
-   gis
-   html5
-   http
-   models
-
-
-By Package:
-
-.. toctree::
-
-    commands
+    1general
+    2models
+    3gis
+    cache
+    currency
+    html5
+    http
     templatetags
 
 

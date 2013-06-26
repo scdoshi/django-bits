@@ -1,12 +1,14 @@
 """
-Currency: This module is for currency related utilites.
-
-Module elements not in this file:
-
-1. `currency` and `currency2`
-    template filters located in `bits.templatetags.currency`
+Currency related utilites.
 
 """
+#
+# External module elements
+#
+# 1. `currency` and `currency2`
+#     template filters located in `bits.templatetags.currency`
+#
+
 
 ###############################################################################
 ## Imports

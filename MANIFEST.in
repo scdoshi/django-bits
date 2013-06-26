@@ -1,2 +1,4 @@
-include README.md
 include LICENSE
+include README.md
+recursive-include bits/static *
+recursive-include bits/templates *

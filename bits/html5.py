@@ -1,5 +1,5 @@
 """
-HTML5: Widgets for HTML5 elements
+Widgets for HTML5 elements
 
 """
 

@@ -1,5 +1,5 @@
 """
-HTTP: HTTP related utilities.
+HTTP related utilities.
 
 """
 

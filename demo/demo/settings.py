@@ -1,11 +1,13 @@
 # Django settings for demo project.
 
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
+import sys, os
+sys.path.insert(0, os.path.abspath('..'))
 
-import os
 settings_dir = os.path.dirname(__file__)
 PROJECT_ROOT = os.path.abspath(os.path.dirname(settings_dir))
+
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),

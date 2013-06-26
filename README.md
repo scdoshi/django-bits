@@ -1,6 +1,6 @@
 django-bits
 ===========
 
-Helpers and utilities for django projects 
+Bits of code that are helpful for django projects.
 
-Documentation at http://django-bits.readthedocs.org.
+Documentation at http://django-bits.rtfd.org.

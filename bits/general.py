@@ -1,5 +1,5 @@
 """
-General: General utilities for django.
+General utilities for django.
 
 """
 
@@ -13,6 +13,7 @@ from django.db.models import get_model
 from django.db.models.signals import post_delete, post_save
 from django.dispatch import receiver, Signal
 from django.shortcuts import _get_queryset
+
 
 ###############################################################################
 ## Utils

@@ -1,12 +1,13 @@
 """
-Cache: This module is for cache related utilites.
-
-Module elements not in this file:
-
-1. `clear_cache`
-    management command in `bits.management.commands.clear_cache`
+Cache related utilites.
 
 """
+#
+# External module elements
+#
+# 1. `clear_cache`
+#     management command in `bits.management.commands.clear_cache`
+#
 
 ###############################################################################
 ## Constants

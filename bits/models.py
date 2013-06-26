@@ -1,5 +1,5 @@
 """
-Models: utility Model classes based on `models.Model`
+Utility Model classes based on `models.Model`
 
 """
 
@@ -12,7 +12,11 @@ from datetime import datetime
 # Django
 from django.conf import settings
 from django.db import models
-from django.utils.timezone import now
+from django import get_version
+
+DJANGO_VERSION = get_version()
+if DJANGO_VERSION >= '1.4':
+    from django.utils.timezone import now
 
 
 ###############################################################################
@@ -26,7 +30,7 @@ def usetz_now():
 
     """
     USE_TZ = getattr(settings, 'USE_TZ', False)
-    if USE_TZ:
+    if USE_TZ and DJANGO_VERSION >= '1.4':
         return now()
     else:
         return datetime.utcnow()

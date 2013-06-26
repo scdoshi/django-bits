@@ -1,12 +1,8 @@
 """
-Sends the `after_syncdb` signal
-
-::
-
-    >>> python manage.py after_syncdb
-    Sent after_syncdb
+Sends the `after_syncdb` signal.
 
 """
+
 ###############################################################################
 ## Imports
 ###############################################################################

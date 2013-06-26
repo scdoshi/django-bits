@@ -1,4 +1,4 @@
-cache
+Cache
 =====
 
 .. automodule:: bits.cache
@@ -6,8 +6,8 @@ cache
     :undoc-members:
 
 
-:mod:`commands`
----------------
+Commands
+--------
 
 .. automodule:: bits.management.commands.clear_cache
     :members:
